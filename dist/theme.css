@@ -1,0 +1,44 @@
+.theme-toggle{display:grid;place-items:center;flex-shrink:0;width:38px;height:38px;padding:0;border:1px solid #173a3838;border-radius:50%;background:transparent;color:inherit;font-size:23px;line-height:1}
+.theme-toggle:hover{background:#b77a5820}.theme-sun{display:none}
+html[data-theme=dark]{color-scheme:dark}
+html[data-theme=light]{color-scheme:light}
+html[data-theme=dark] .theme-moon{display:none}
+html[data-theme=dark] .theme-sun{display:block;font-size:20px}
+html[data-theme=dark] body{background:#0e201f;color:#f3f0e8}
+html[data-theme=dark] .header{background:#0e201fe8;border-color:#afbeb12b}
+html[data-theme=dark] .header nav{background:#0e201f}
+html[data-theme=dark] .header nav a:after{background:#d9a182}
+html[data-theme=dark] .theme-toggle,html[data-theme=dark] .circle,html[data-theme=dark] .orbit,html[data-theme=dark] .hero-bottom,html[data-theme=dark] .service,html[data-theme=dark] .tags span,html[data-theme=dark] .project-tags li,html[data-theme=dark] .projects-end,html[data-theme=dark] .project-switch{border-color:#afbeb140}
+html[data-theme=dark] .nav-contact,html[data-theme=dark] .brief-submit{background:#d9a182;color:#102725}
+html[data-theme=dark] .copper,html[data-theme=dark] .service-n{color:#d9a182}
+html[data-theme=dark] .sculpture-caption,html[data-theme=dark] .service-intro p,html[data-theme=dark] .service-body p,html[data-theme=dark] .privacy-note{color:#c0cec5}
+html[data-theme=dark] .swatch.selected:after{border-color:#f3f0e8}
+html[data-theme=dark] .manifesto{background:#142d2b}
+html[data-theme=dark] .marquee{background:#29443e;color:#e4e9dc}
+html[data-theme=dark] .marquee b{color:#d9a182}
+html[data-theme=dark] .projects,html[data-theme=dark] .explore{background:#142927}
+html[data-theme=dark] .project-stage{background:#243d36}
+html[data-theme=dark] .project-switch button[aria-selected=true]{background:#d9a182;color:#102725}
+html[data-theme=dark] .project-visit,html[data-theme=dark] .demo-toolbar a{border-color:#afbeb1}
+html[data-theme=dark] .project-chrome{background:#18312f;color:#c0cec5}
+html[data-theme=dark] .project-window{border-color:#afbeb140}
+html[data-theme=dark] .lab{background:#18312f;border-color:#afbeb140}
+html[data-theme=dark] .lab-top,html[data-theme=dark] .lab-footer{border-color:#afbeb140}
+html[data-theme=dark] .lab-tabs{background:#29443e}
+html[data-theme=dark] .lab-tabs button[aria-selected=true]{background:#d9a182;color:#102725}
+html[data-theme=dark] .lab-stage{background:radial-gradient(ellipse,#304b43,#192f2c 75%)}
+html[data-theme=dark] .lab-note{color:#d2ddd4}
+html[data-theme=dark] .palette-card,html[data-theme=dark] .browser-demo,html[data-theme=dark] .tile-one,html[data-theme=dark] .tile-three{color:#173a38;color-scheme:light}
+html[data-theme=dark] .process-card{background:#213b35;border-color:#afbeb140}
+html[data-theme=dark] .process-card:nth-child(2){background:#2c4840}
+html[data-theme=dark] .process-card:nth-child(3){background:#173a38}
+html[data-theme=dark] .process-track{background:#afbeb140}
+html[data-theme=dark] .art-listen i,html[data-theme=dark] .art-design i{border-color:#afbeb1}
+html[data-theme=dark] .contact{background:#704833;color:#f3f0e8}
+html[data-theme=dark] .contact-bottom a{border-color:#d9a182}
+html[data-theme=dark] dialog{background:#18312f;color:#f3f0e8;border-color:#afbeb140}
+html[data-theme=dark] select,html[data-theme=dark] textarea{background:#0e201f;color:#f3f0e8;border-color:#afbeb140}
+html[data-theme=dark] textarea::placeholder{color:#afbeb1}
+@media(max-width:400px){.header{padding-left:14px;padding-right:14px}.brand{width:85px}.nav-actions{gap:7px}.theme-toggle{width:32px;height:32px}}
+
+.theme-toggle{display:flex;align-items:center;justify-content:center;line-height:0}.theme-toggle svg{flex:none;width:20px;height:20px;margin:0}.theme-moon{display:block}

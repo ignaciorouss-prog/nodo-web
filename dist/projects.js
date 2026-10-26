@@ -1,0 +1,8 @@
+(()=>{
+ const tabs=[...document.querySelectorAll('.project-switch [role=tab]')];
+ function select(tab){tabs.forEach(t=>{const active=t===tab;t.setAttribute('aria-selected',String(active));t.tabIndex=active?0:-1;document.getElementById(t.getAttribute('aria-controls')).hidden=!active;});const panel=document.getElementById(tab.getAttribute('aria-controls'));if(!document.body.classList.contains('motion-off'))panel.animate([{opacity:.15,transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}],{duration:550,easing:'cubic-bezier(.16,1,.3,1)'});}
+ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>select(tab));tab.addEventListener('keydown',e=>{let n;if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;if(n!==undefined){e.preventDefault();select(tabs[n]);tabs[n].focus();}});});
+})();
+
+document.querySelectorAll('.activate-demo').forEach(button=>button.addEventListener('click',()=>{const stage=button.closest('.project-stage'),win=stage.querySelector('.project-window'),frame=stage.querySelector('iframe');win.classList.add('demo-active');frame.inert=false;frame.tabIndex=0;stage.querySelector('.release-demo').hidden=false;frame.focus();}));
+document.querySelectorAll('.release-demo').forEach(button=>button.addEventListener('click',()=>{const stage=button.closest('.project-stage'),frame=stage.querySelector('iframe');stage.querySelector('.project-window').classList.remove('demo-active');frame.inert=true;frame.tabIndex=-1;button.hidden=true;stage.querySelector('.activate-demo').focus();}));
